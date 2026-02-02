@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+    background-color: #000000;
+}
+body.light .display{ background-color: #cbd5f5;}
+body.light button{ color: #020617;}
+body.light{
+   background-color: rgb(165, 224, 246);
+}
+body.light .container{
+    background-color: #000000;
+}
+body.light h1,
+body.light .message{
+    color: #ffffff;
+}
+.container{
+    width: min(90%, 420px);
+    border: 2px solid black;
+    border: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+   background-color: rgb(165, 224, 246);
+    border-radius: 16px;
+}
+h1{
+    margin: 10px;
+    color:#000000;;
+    font-size: 24px;
+    font-weight: 600;
+}
+.display{
+    width: 50%;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25) ;
+    background-color:#94a3b8;
+    transition: transform 0.2s ease;
+}
+.display.bump{
+    transform: scale(1.15);
+}
+.action-btn{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    gap: 12px;
+    
+}
+#increaseBtn{
+    padding: 5px;
+    width: 5rem;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color:#16a34a;;
+}
+#increaseBtn:hover{
+    background-color: #166416;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+}
+#resetBtn{
+    border: none;
+    outline: none;
+    background-color: rgb(136, 151, 151)
+}
+#resetBtn:hover{
+    background-color: rgb(92, 100, 100);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+}
+#decreaseBtn{
+    border: none;
+    outline: none;
+    background-color: #dc2626;
+}
+#decreaseBtn:hover{
+    background-color: #bf0505;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+}
+button{
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 5rem;
+    padding: 6px;
+    font-size: 15px;
+    border-radius: 6px;
+}
+button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+} 
+.message{
+    min-height: 20px;
+    color: rgb(0, 0, 0);
+}
+.extend-btn{
+    border: none;
+    outline: none;
+    background-color: rgb(239, 177, 95);
+}
+.extend-btn:hover{
+    background-color: rgb(204, 133, 40);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+}
+#themeToggle{
+    border: none;
+    outline: none;
+    background-color: rgb(88, 106, 146);
+}
+#themeToggle:hover{
+    background-color: rgb(140, 162, 210);
+    box-shadow:2px 2px 2px rgba(0,0,0,0.8) ;
+}
+
+.container.shake{
+    animation: shake 0.3s ease;
+}
+@keyframes shake {
+    0% {transform: translateX(0);}
+    25% {transform: translateX(-5px);}
+    50% {transform: translateX(5px);}
+    75% {transform: translateX(-5px);}
+    100% {transform: translateX(0);}
+}
